@@ -18,6 +18,7 @@
   "homepage": "https://github.com/SvitlanaTsupryk-jul18/Visa#readme",
   "devDependencies": {
     "browser-sync": "^2.26.3",
+    "cors": "^2.8.5",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-sass": "^4.0.2"

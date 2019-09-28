@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "San Francisco Pro Display Regular";
+  src: url("../fonts/SFProDisplay-Regular.eot");
+  src: url("../fonts/SFProDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/SFProDisplay-Regular.woff") format("woff"), url("../fonts/SFProDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -6,147 +13,129 @@
   text-decoration: none; }
 
 body {
-  color: #000;
-  font-family: "Roboto Slab", serif;
+  color: #222222;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   scroll-behavior: smooth; }
 
-.content {
-  display: flex;
-  justify-content: space-around;
-  height: 120vh; }
-
-.lll {
-  height: 300px; }
-
-.layer {
-  width: 30%;
-  height: 100px; }
-
-.first {
-  background-color: green;
-  opacity: 0.5; }
-
-.second {
-  background-color: yellow;
-  opacity: 0.5;
-  margin-top: 20px; }
-
-.third {
-  background-color: Red;
-  opacity: 0.5;
-  margin-top: 50px; }
-
-.sctitle {
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
+.hero {
+  height: 100vh;
   text-align: center;
-  position: relative;
-  padding-bottom: 60px; }
-  .sctitle:before {
-    position: absolute;
-    content: " ";
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    width: 50px;
-    height: 2px;
-    background-color: #000; }
+  margin-bottom: 110px; }
 
-.undertitle {
-  font-size: 16px;
-  text-align: center;
-  margin-bottom: 70px; }
-
-.preloader {
-  position: fixed;
+.vimeo-wrapper {
+  position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  background-image: url(../images/hero-bg.png); }
+
+.vimeo-wrapper iframe {
   width: 100vw;
-  height: 100vh;
-  z-index: 3;
-  background-color: rgba(192, 48, 28, 0.7);
-  text-align: center;
-  color: #fff;
-  font-size: 30px;
-  padding: 20%;
-  transition: 1s all;
-  opacity: 1;
-  visibility: visible; }
-
-.loader {
-  width: 90px;
-  height: 90px;
-  border: 10px solid white;
-  border-radius: 50%;
-  border-top-color: #c0301c;
-  line-height: 60px;
-  color: white;
-  padding: 5px;
+  height: 56.25vw;
+  /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+  min-height: 100vh;
+  min-width: 177.77vh;
+  /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
   position: absolute;
-  left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  animation: spin 1s infinite; }
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
-.done {
-  opacity: 0;
-  visibility: hidden; }
+.header {
+  max-width: 896px;
+  height: 80px;
+  margin: 0 auto;
+  border-bottom: rgba(255, 255, 255, 0.15) 1px solid;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .header__right {
+    display: flex;
+    align-items: center; }
+  .header__btn {
+    background-color: white;
+    color: #066eb0;
+    padding: 8px 16px;
+    border-radius: 23.5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s; }
+    .header__btn:hover {
+      animation: pulse ease-in 0.5s; }
+  .header__h2 {
+    font-size: 64px;
+    color: #ffffff;
+    font-family: "San Francisco Pro Display Regular", sans-serif; }
+  .header__img {
+    height: 267.93px;
+    padding: 40px; }
 
-#left,
-#right {
-  display: inline-block; }
+h1 {
+  font-size: 35px;
+  color: #ffffff;
+  font-family: "San Francisco Pro Display Regular", sans-serif;
+  padding-top: 5%; }
 
-@keyframes spin {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg); }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg); } }
+.logo {
+  width: 60px;
+  display: flex;
+  transition: all 0.3s; }
+  .logo:hover {
+    transform: rotate(180deg); }
 
-@media only screen and (max-width: 768px) {
-  body {
-    padding-bottom: 195px; } }
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.65);
+  border-radius: 50%; }
+  .circle:nth-child(2) {
+    margin-left: -5px; }
 
-@media only screen and (max-width: 576px) {
-  .undertitle {
-    margin-bottom: 20px; } }
+.menu-icon {
+  width: 20px;
+  height: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 24px;
+  cursor: pointer;
+  transition: all 0.2s; }
+  .menu-icon span {
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 4px; }
+  .menu-icon:hover {
+    transform: scale(1.1); }
 
-@media only screen and (max-width: 470px) and (min-width: 320px) {
-  body {
-    padding-bottom: 135px; }
-  .sctitle {
-    padding-bottom: 30px; }
-    .sctitle:before {
-      top: 30px; } }
-
-@keyframes rubberBand {
+@-webkit-keyframes pulse {
   from {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1); }
-  30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1); }
-  40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-    transform: scale3d(0.75, 1.25, 1); }
   50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
-    transform: scale3d(1.15, 0.85, 1); }
-  65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-    transform: scale3d(0.95, 1.05, 1); }
-  75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1); }
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05); }
   to {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1); } }
 
-.rubberBand {
-  -webkit-animation-name: rubberBand;
-  animation-name: rubberBand; }
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05); }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
 
 .card {
   padding: 30px 25px;
@@ -182,6 +171,3 @@ body {
 
 .object-3 {
   margin-top: 200px; }
-
-.header {
-  height: 100px; }
