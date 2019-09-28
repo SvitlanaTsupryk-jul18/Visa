@@ -13,6 +13,7 @@
 
   //////preloader
   scrolling();
+  fixMenu();
 
   function scrolling() {
     const parallax = document.querySelector(".parallax");
@@ -28,6 +29,20 @@
 
         par1.style.transform = `translateY(${-sdvig / 2}px)`;
         par2.style.transform = `translateY(${-sdvig}px)`;
+      }
+    });
+  }
+
+  function fixMenu() {
+    let header = document.querySelector(".header--fix");
+
+    window.addEventListener("scroll", function() {
+      if (window.pageYOffset >= 120) {
+        header.classList.add("fixed", "fadeInDown");
+        header.classList.remove("fadeOutUp");
+      } else {
+        header.classList.remove("fixed", "fadeInDown");
+        header.classList.add("fadeOutUp");
       }
     });
   }
