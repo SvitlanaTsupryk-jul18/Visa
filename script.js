@@ -23,10 +23,15 @@
     const par2 = document.querySelector(".col-3");
 
     window.addEventListener("scroll", function() {
-      let scrolledHeight = window.pageYOffset,
-        limit = parallax.offsetTop + parallax.offsetHeight;
+      let scrolledHeight = window.pageYOffset;
+      let winWidth = window.offsetWidth;
+      let limit = parallax.offsetTop + parallax.offsetHeight;
 
-      if (scrolledHeight > parallax.offsetTop && scrolledHeight <= limit) {
+      if (
+        winWidth > 800 &&
+        scrolledHeight > parallax.offsetTop &&
+        scrolledHeight <= limit
+      ) {
         let sdvig = scrolledHeight - parallax.offsetTop;
 
         par1.style.transform = `translateY(${-sdvig / 2}px)`;
