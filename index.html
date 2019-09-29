@@ -14,13 +14,11 @@
 </head>
 
 <body>
-
-    <section class="hero" id="video-bg">
+    <section class="hero">
         <div class="vimeo-wrapper">
             <iframe src="https://player.vimeo.com/video/275244537?background=1" frameborder="0"
                 allow="autoplay; fullscreen" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
-
         <header class="header">
             <a href="#" class="logo">
                 <div class="circle"></div>
@@ -53,51 +51,55 @@
         <h2 class="header__h2">Картка для <br> яскравих подорожей</h2>
         <img class="header__img" src="./images/Card.png" alt="image of card">
     </section>
-    <div class="parallax">
-        <div class="page-content">
-            <h2>Планування подорожі</h2>
-            <p>Ретельна підготовка — запорука вдалої мандрівки</p>
-        </div>
+
+    <section class="parallax">
+        <a href="#">
+            <div class="parallax__titles">
+                <h2 class="parallax__title">Планування подорожі</h2>
+                <p class="parallax__text">Ретельна підготовка — запорука вдалої мандрівки</p>
+            </div>
+        </a>
         <div class="plan">
-            <div class="plan__col object-1">
+            <div class="plan__col col-1">
                 <div class="card card--hovered">
                     <a class="card__inner" href="#">
-                        <img class="card__img" src="./images/image1.png" alt="visa icon">
+                        <img class="card__img" src="./images/image1.png" alt="VLHC icon">
                         <h3 class="card__title">Visa Luxury Hotel collection </h3>
                         <p class="card__text">Діє по всьому світу цілодобово й надає для вас глобальний сервіс
                             інформаційної підтримки в телефонному режимі.</p>
-                        <button class="card__btn" type="button">Подробнее<span>></span></button>
+                        <p class="card__btn">Подробнее<span>></span></p>
                     </a>
                 </div>
                 <div class="card">
                     <img class="card__img" src="./images/visa.png" alt="visa icon">
                     <h3 class="card__title">Оренда сейфу </h3>
-                    <p class="card__text">Орендуйте сейф зі знижкою 30 % для надійного зберігання важливих документів та
+                    <p class="card__text">Орендуйте сейф зі знижкою 30 % для надійного зберігання важливих
+                        документів та
                         цінних речей, доки ви за кордоном.</p>
                 </div>
-                <div class="card card--hovered">
+                <div class="card card--hovered card--yellow">
                     <a class="card__inner" href="#">
-                        <img class="card__img" src="./images/Black Suitcase.H03.png" alt="visa icon">
-                        <h3 class="card__title">Повне страхування подорожі
+                        <img class="card__img" src="./images/Black Suitcase.H03.png" alt="Suitcase">
+                        <h3 class="card__title">Повне страхування подорожі <br>
                             до 500 000 $</h3>
                         <p class="card__text">Сума страхового покриття для власників карток Visa Signature</p>
-                        <button class="card__btn" type="button">Подробнее<span>></span></button>
+                        <p class="card__btn">Подробнее<span>></span></p>
                     </a>
                 </div>
             </div>
-
-            <div class="plan__col  object-2">
-                <div class="card card--hovered">
+            <div class="plan__col  col-2">
+                <div class="card card--hovered card--blue">
                     <a class="card__inner" href="#">
-                        <img class="card__img" src="./images/Car.png" alt="visa icon">
+                        <img class="card__img" src="./images/Car.png" alt="car">
                         <h3 class="card__title">Оренда авто </h3>
-                        <p class="card__text">Бронюйте автомобілі по всьому світу, оплачуйте карткою Visa Signature та
+                        <p class="card__text">Бронюйте автомобілі по всьому світу, оплачуйте карткою Visa Signature
+                            та
                             отримайте знижку</p>
-                        <button class="card__btn" type="button">Подробнее<span>></span></button>
+                        <p class="card__btn">Подробнее<span>></span></p>
                     </a>
                 </div>
                 <div class="card">
-                    <img class="card__img" src="./images/pers-manager.png" alt="agoda icon">
+                    <img class="card__img" src="./images/pers-manager.png" alt="icon">
                     <h3 class="card__title">Персональний менеджер</h3>
                     <p class="card__text">Ваш фінансовий помічник, який завжди допоможе:
                         - здійснити банківські операції за вашим дорученням
@@ -105,33 +107,29 @@
                         - надасть якісні консультації й підбере для вас найкращі умови</p>
                 </div>
             </div>
-
-            <div class="plan__col object-3">
+            <div class="plan__col col-3">
                 <div class="card card--hovered">
                     <a class="card__inner" href="#">
                         <img class="card__img" src="./images/visa.png" alt="visa icon">
                         <h3 class="card__title">Консьєрж-сервіс </h3>
                         <p class="card__text">Діє по всьому світу цілодобово й надає для вас глобальний сервіс
                             інформаційної підтримки в телефонному режимі.</p>
-                        <button class="card__btn" type="button">Подробнее<span>></span></button>
+                        <p class="card__btn">Подробнее<span>></span></p>
                     </a>
                 </div>
                 <div class="card">
                     <img class="card__img" src="./images/agoda.png" alt="agoda icon">
                     <h3 class="card__title">Оренда готелю на agoda.com </h3>
-                    <p class="card__text">Знижки у разі бронювання на <a href="agoda.com">agoda.com.</a> Знижка 12 % в
+                    <p class="card__text">Знижки у разі бронювання на <a href="agoda.com">agoda.com.</a> Знижка 12 %
+                        в
                         більш ніж 985 тис. готелів по всьому світу</p>
                 </div>
             </div>
         </div>
-    </div>
 
-    <footer class="footer">
-
-    </footer>
+    </section>
 
     <script src="script.js " defer></script>
-
 </body>
 
 </html>

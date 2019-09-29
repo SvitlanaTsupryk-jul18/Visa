@@ -15,10 +15,12 @@
   scrolling();
   fixMenu();
 
+  /// parallax
+
   function scrolling() {
     const parallax = document.querySelector(".parallax");
-    const par1 = document.querySelector(".object-2");
-    const par2 = document.querySelector(".object-3");
+    const par1 = document.querySelector(".col-2");
+    const par2 = document.querySelector(".col-3");
 
     window.addEventListener("scroll", function() {
       let scrolledHeight = window.pageYOffset,
@@ -32,6 +34,8 @@
       }
     });
   }
+
+  ///fixed menu
 
   function fixMenu() {
     let header = document.querySelector(".header--fix");

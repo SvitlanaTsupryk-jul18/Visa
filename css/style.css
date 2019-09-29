@@ -114,6 +114,144 @@ h1 {
   .menu-icon:hover {
     transform: scale(1.1); }
 
+.fadeOutUp {
+  animation: fadeOutUp ease-in 0.5s 1; }
+
+.header--fix {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  background-color: #fff;
+  opacity: 0; }
+  .header--fix .circle {
+    background-color: rgba(0, 0, 0, 0.65); }
+  .header--fix .menu-icon span {
+    background: #000; }
+  .header--fix .header__btn {
+    color: #fff;
+    background-color: #000; }
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  opacity: 1; }
+
+.parallax {
+  display: block;
+  max-width: 1068px;
+  margin: 0 auto;
+  background-image: url("../images/wing-of-airplane.png");
+  background-size: cover;
+  border-radius: 24px;
+  padding: 60px 0; }
+  .parallax__title {
+    font-weight: bold;
+    font-size: 54px;
+    color: #fff;
+    font-family: "San Francisco Pro Display Regular", sans-serif;
+    padding: 20px 8%; }
+  .parallax__text {
+    font-size: 20px;
+    color: #fff;
+    padding: 0 8%; }
+
+.card {
+  padding: 30px 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  margin-top: 32px;
+  width: 276px;
+  transition: all 0.3s; }
+  .card--hovered:hover {
+    transform: translateY(-4px);
+    box-shadow: 3px 3px 7px #000; }
+  .card--hovered:hover .card__btn span {
+    transform: translateX(8px); }
+  .card__inner {
+    display: block;
+    height: 100%;
+    width: 100%; }
+  .card__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+    padding: 10px 0; }
+  .card__text {
+    font-size: 14px;
+    line-height: 20px;
+    color: #000; }
+  .card__btn {
+    color: #066eb0;
+    padding-top: 25px; }
+    .card__btn span {
+      margin-left: 15px;
+      display: inline-block;
+      transition: all 0.2s; }
+  .card--yellow {
+    background: linear-gradient(180deg, #ffdf6b 0%, #ffd43c 100%); }
+    .card--yellow .card__title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 33px; }
+    .card--yellow .card__img {
+      margin-left: -30px;
+      margin-top: -20px; }
+    .card--yellow .card__btn {
+      color: #000; }
+  .card--blue {
+    background: linear-gradient(180deg, #7a9fff 0%, #57d5f0 100%); }
+    .card--blue .card__title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 33px; }
+    .card--blue .card__img {
+      margin: -50px -30px; }
+    .card--blue .card__btn {
+      color: #000; }
+
+.plan {
+  display: flex;
+  justify-content: space-evenly; }
+  .plan__col {
+    width: 276px; }
+
+.col-1 {
+  margin-top: 50px; }
+
+.col-2 {
+  margin-top: 150px; }
+
+.col-3 {
+  margin-top: 250px; }
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05); }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05); }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
 @-webkit-keyframes fadeInDown {
   from {
     opacity: 0;
@@ -152,87 +290,3 @@ h1 {
     opacity: 0;
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0); } }
-
-.fadeOutUp {
-  animation: fadeOutUp ease-in 0.5s 1; }
-
-.header--fix {
-  width: 100%;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 17%;
-  background-color: #fff;
-  opacity: 0; }
-  .header--fix .circle {
-    background-color: rgba(0, 0, 0, 0.65); }
-  .header--fix .menu-icon span {
-    background: #000; }
-  .header--fix .header__btn {
-    color: #fff;
-    background-color: #000; }
-
-.fixed {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 5;
-  opacity: 1; }
-
-@-webkit-keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1); }
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05); }
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1); } }
-
-@keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1); }
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05); }
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1); } }
-
-.card {
-  padding: 30px 25px;
-  background: #ffffff;
-  border-radius: 12px;
-  margin-top: 32px;
-  width: 276px;
-  transition: all 0.3s; }
-  .card--hovered:hover {
-    transform: translateY(-4px);
-    box-shadow: 3px 3px 7px #000; }
-  .card__inner {
-    display: block;
-    height: 100%;
-    width: 100%; }
-
-.parallax {
-  max-width: 1068px;
-  margin: 0 auto;
-  background-image: url("../images/wing-of-airplane.png"); }
-
-.plan {
-  display: flex;
-  justify-content: space-evenly; }
-  .plan__col {
-    width: 276px; }
-
-.object-1 {
-  margin-top: 0px; }
-
-.object-2 {
-  margin-top: 100px; }
-
-.object-3 {
-  margin-top: 200px; }

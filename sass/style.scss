@@ -28,6 +28,8 @@ body {
   scroll-behavior: smooth;
 }
 
+//// hero section
+
 .hero {
   height: 100vh;
   text-align: center;
@@ -139,62 +141,6 @@ h1 {
   }
 }
 
-@-webkit-keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeInDown {
-  animation: fadeInDown ease-in 0.5s 1;
-}
-
-@-webkit-keyframes fadeOutUp {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-}
-
-@keyframes fadeOutUp {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-}
-
 .fadeOutUp {
   animation: fadeOutUp ease-in 0.5s 1;
 }
@@ -205,7 +151,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 17%;
+  padding: 0 8%;
   background-color: #fff;
   opacity: 0;
   .circle {
@@ -228,78 +174,122 @@ h1 {
   opacity: 1;
 }
 
-// .undertitle {
-//   font-size: 16px;
-//   text-align: center;
-//   margin-bottom: 70px;
-// }
+////paralax section
 
-// .preloader {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   z-index: 3;
-//   background-color: $img-color;
-//   text-align: center;
-//   color: #fff;
-//   font-size: 30px;
-//   padding: 20%;
-//   transition: 1s all;
-//   opacity: 1;
-//   visibility: visible;
-// }
+.parallax {
+  display: block;
+  max-width: 1068px;
+  margin: 0 auto;
+  background-image: url("../images/wing-of-airplane.png");
+  background-size: cover;
+  border-radius: 24px;
+  padding: 60px 0;
+  &__title {
+    font-weight: bold;
+    font-size: 54px;
+    color: #fff;
+    font-family: $title-font;
+    padding: 20px 8%;
+  }
+  &__text {
+    font-size: 20px;
+    color: #fff;
+    padding: 0 8%;
+  }
+}
 
-// .loader {
-//   width: 90px;
-//   height: 90px;
-//   border: 10px solid white;
-//   border-radius: 50%;
-//   border-top-color: #c0301c;
-//   line-height: 60px;
-//   color: white;
-//   padding: 5px;
-//   position: absolute;
-//   left: 50%;
-//   top: 50%;
-//   transform: translate(-50%, -50%);
-//   animation: spin 1s infinite;
-// }
+.card {
+  padding: 30px 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  margin-top: 32px;
+  width: 276px;
+  transition: all 0.3s;
+  &--hovered:hover {
+    transform: translateY(-4px);
+    box-shadow: 3px 3px 7px #000;
+  }
+  &--hovered:hover .card__btn span {
+    transform: translateX(8px);
+  }
 
-// .done {
-//   opacity: 0;
-//   visibility: hidden;
-// }
+  &__inner {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+    padding: 10px 0;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+  }
+  &__btn {
+    color: $mainColor;
+    padding-top: 25px;
+    span {
+      margin-left: 15px;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+  }
+  &--yellow {
+    background: linear-gradient(180deg, #ffdf6b 0%, #ffd43c 100%);
+    .card__title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 33px;
+    }
+    .card__img {
+      margin-left: -30px;
+      margin-top: -20px;
+    }
+    .card__btn {
+      color: #000;
+    }
+  }
+  &--blue {
+    background: linear-gradient(180deg, #7a9fff 0%, #57d5f0 100%);
+    .card__title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 33px;
+    }
+    .card__img {
+      margin: -50px -30px;
+    }
+    .card__btn {
+      color: #000;
+    }
+  }
+}
 
-// #left,
-// #right {
-//   display: inline-block;
-// }
+.plan {
+  display: flex;
+  justify-content: space-evenly;
+  &__col {
+    width: 276px;
+  }
+}
+.col-1 {
+  margin-top: 50px;
+}
 
-// @keyframes spin {
-//   from {
-//     transform: translate(-50%, -50%) rotate(0deg);
-//   }
-//   to {
-//     transform: translate(-50%, -50%) rotate(360deg);
-//   }
-// }
+.col-2 {
+  margin-top: 150px;
+}
 
-// @media only screen and (max-width: 768px) {
-//   %sec-padding {
-//     padding: 50px 0;
-//   }
-//   body {
-//     padding-bottom: 195px;
-//   }
-// }
+.col-3 {
+  margin-top: 250px;
+}
 
-// @media only screen and (max-width: 576px) {
-//   .undertitle {
-//     margin-bottom: 20px;
-//   }
-// }
+
 
 // @media only screen and (max-width: 470px) and(min-width: 320px) {
 //   %sec-padding {
@@ -357,12 +347,10 @@ h1 {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
-
   50% {
     -webkit-transform: scale3d(1.05, 1.05, 1.05);
     transform: scale3d(1.05, 1.05, 1.05);
   }
-
   to {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
@@ -374,56 +362,64 @@ h1 {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
-
   50% {
     -webkit-transform: scale3d(1.05, 1.05, 1.05);
     transform: scale3d(1.05, 1.05, 1.05);
   }
-
   to {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
 }
 
-.card {
-  padding: 30px 25px;
-  background: #ffffff;
-  border-radius: 12px;
-  margin-top: 32px;
-  width: 276px;
-  transition: all 0.3s;
-  &--hovered:hover {
-    transform: translateY(-4px);
-    box-shadow: 3px 3px 7px #000;
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
   }
-  &__inner {
-    display: block;
-    height: 100%;
-    width: 100%;
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-.parallax {
-  max-width: 1068px;
-  margin: 0 auto;
-  background-image: url("../images/wing-of-airplane.png");
-}
-.plan {
-  display: flex;
-  justify-content: space-evenly;
-  &__col {
-    width: 276px;
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
-.object-1 {
-  margin-top: 0px;
+
+.fadeInDown {
+  animation: fadeInDown ease-in 0.5s 1;
 }
 
-.object-2 {
-  margin-top: 100px;
+@-webkit-keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
 }
 
-.object-3 {
-  margin-top: 200px;
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
 }
